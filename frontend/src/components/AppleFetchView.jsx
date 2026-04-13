@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Search, Loader2 } from 'lucide-react';
 import axios from 'axios';
 
-const BACKEND_URL = 'http://localhost:8000';
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8000';
 
 export function AppleFetchView({ onSuccess, setLoading, loading, setError }) {
   const [appId, setAppId] = useState('');

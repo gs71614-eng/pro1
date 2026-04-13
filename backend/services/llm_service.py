@@ -3,6 +3,10 @@ import json
 import re
 import httpx
 import asyncio
+from dotenv import load_dotenv
+
+# Load secret variables from local .env file
+load_dotenv()
 
 HF_API_KEY = os.getenv("HF_API_KEY")
 HF_MODEL_URL = "https://api-inference.huggingface.co/models/meta-llama/Meta-Llama-3-8B-Instruct"

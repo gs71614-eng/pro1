@@ -7,7 +7,7 @@ import { ResultsDashboard } from './components/ResultsDashboard';
 import { FileSpreadsheet, PlayCircle, Apple, LayoutDashboard } from 'lucide-react';
 import axios from 'axios';
 
-const BACKEND_URL = 'http://localhost:8000';
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8000';
 
 function App() {
   const [activeTab, setActiveTab] = useState('csv');
